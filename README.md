@@ -135,8 +135,8 @@ Or a folder like: **"/action-types/"**
 ```
 
 ## Tests
-1. Clone this repository.
-<br>
+1. Clone this repository
+
 2. Run `yarn install`
-<br>
+
 3. Run `yarn run test`, and look at the file **demo/transform.js**
