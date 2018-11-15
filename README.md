@@ -117,4 +117,20 @@ Or a partner like: **/types-.\*?\.js/**
 ```
 # Support
 
-Babel 6
+<table>
+    <tr>
+      <td>Babel 6</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>Babel 7</td>
+      <td>2.0</td>
+    </tr>
+</table>
+
+# Test
+1. Clone this repository.
+<br>
+2. Run `yarn install`
+<br>
+3. Run `yarn run test`, and look at the file **demo/transform.js**

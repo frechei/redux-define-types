@@ -1,4 +1,4 @@
-const babel = require('babel-types');
+const babel = require('@babel/types');
 
 module.exports = (options) => {
     const {filePartner} = options;
