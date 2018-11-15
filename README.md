@@ -1,8 +1,8 @@
 # redux-define-types
 Define redux types in more easy way.
 
-# How do you define redux types in traditional way?
-### First way:
+## How to define types in traditional way?
+### First:
 ```js
 // Group 1
 export const FETCH_DATA = 'fetch data prepare';
@@ -20,7 +20,7 @@ export const SET_LOCAL_CLOCK = 'set local clock';
 // Group 4
 export const SET_LOCAL_STORAGE = 'set local storage';
 ```
-### Second way:
+### Second:
 ```js
 // Group 1
 export const FETCH_DATA = {
@@ -49,7 +49,7 @@ But what I say: `It's wasting life.`
 <br>
 Exactly, you just repeat your defination every time. The work will make you crazy.
 
-# How can we define redux types in modern way?
+## How to define in modern way?
 ```js
 import { ACTION_TYPES, ACTION_SINGLE_TYPE } from 'redux-define-types';
 
@@ -82,7 +82,7 @@ export function dataReducer(state = {}, action) {
   }
 }
 ```
-# Support
+## Support
 
 <table>
     <tr>
@@ -98,7 +98,7 @@ export function dataReducer(state = {}, action) {
 </table>
 
 `npm` is also supported.
-# Do not forget to add babel plugin to file `.babelrc`
+## Do not forget to add babel plugin
 ```json
 {
   "plugins": [
@@ -134,7 +134,7 @@ Or a folder like: **"/action-types/"**
 }
 ```
 
-# Test
+## Tests
 1. Clone this repository.
 <br>
 2. Run `yarn install`
