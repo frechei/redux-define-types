@@ -1,32 +1,29 @@
 const babel = require('babel-types');
 
-module.exports = (options) => {
-    const {filePartner} = options;
-
+module.exports = () => {
     return {
         visitor: {
             VariableDeclaration: {
-                enter(path) {
+                enter(path, {opts}) {
                     const file = path && path.hub && path.hub.file;
 
                     if (!file) {
                         return;
                     }
 
-                    const {sourceFileName} = file.opts;
+                    const {sourceFileName, filename} = file.opts;
+                    const {filePartner, fileString} = opts;
 
-                    if (!sourceFileName) {
+                    if (!filename || !sourceFileName) {
                         return;
                     }
 
-                    if (filePartner) {
-                        if (Object.prototype.toString.call(filePartner) === '[object RegExp]' && !filePartner.test(sourceFileName)) {
-                            return;
-                        }
+                    if (filePartner && !(new RegExp(filePartner)).test(filename)) {
+                        return;
+                    }
 
-                        if (sourceFileName.indexOf(filePartner) === -1) {
-                            return;
-                        }
+                    if (fileString && filename.indexOf(fileString) === -1) {
+                        return;
                     }
 
                     const initializeValue = path.node.declarations[0].init;

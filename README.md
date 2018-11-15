@@ -82,11 +82,11 @@ export function dataReducer(state = {}, action) {
 
 # Installation
 ```bash
-yarn add redux-define-types
+yarn add redux-define-types@1.0
 
 # Or
 
-npm install redux-define-types
+npm install redux-define-types@1.0
 ```
 
 # Do not forget to add babel plugin to file `.babelrc`
@@ -99,19 +99,28 @@ npm install redux-define-types
 ```
 ## Options
 
-#### filePartner {string|regexp} (optional)
-Include the path where you define types. It can make babel transform faster.
-
-You can input a filename like: **"actionTypes.js"**
-<br>
-Or a folder like: **"/action-types/"**
-<br>
-Or a partner like: **/types-.\*?\.js/**
+#### filePartner (optional)
+Including the path where you define types. It can make babel transform faster.
 
 ```json
 {
   "plugins": [
-    ["redux-define-types/babel", {"filePartner": "/action-types/"}]
+    ["redux-define-types/babel", {"filePartner": "types-.*?\.js"}]
+  ]
+}
+```
+
+#### fileString (optional)
+Including the path where you define types. It can make babel transform faster.
+
+It can be filename like: **"actionTypes.js"**
+<br>
+Or a folder like: **"/action-types/"**
+
+```json
+{
+  "plugins": [
+    ["redux-define-types/babel", {"fileString": "/action-types/"}]
   ]
 }
 ```
