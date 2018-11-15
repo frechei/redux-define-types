@@ -1,3 +1,6 @@
+# redux-define-types
+Define redux types in more easy way.
+
 # How do you define redux types in traditional way?
 ### First way:
 ```js
