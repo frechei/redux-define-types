@@ -79,16 +79,22 @@ export function dataReducer(state = {}, action) {
   }
 }
 ```
+# Support
 
-# Installation
-```bash
-yarn add redux-define-types
+<table>
+    <tr>
+      <td>Babel 6</td>
+      <td>1.x</td>
+      <td>yarn add redux-define-types@1.0</td>
+    </tr>
+    <tr>
+      <td>Babel 7</td>
+      <td>Current</td>
+      <td>yarn add redux-define-types</td>
+    </tr>
+</table>
 
-# Or
-
-npm install redux-define-types
-```
-
+`npm` is also supported.
 # Do not forget to add babel plugin to file `.babelrc`
 ```json
 {
@@ -115,18 +121,6 @@ Or a partner like: **/types-.\*?\.js/**
   ]
 }
 ```
-# Support
-
-<table>
-    <tr>
-      <td>Babel 6</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <td>Babel 7</td>
-      <td>2.0</td>
-    </tr>
-</table>
 
 # Test
 1. Clone this repository.
