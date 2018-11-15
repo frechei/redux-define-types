@@ -46,7 +46,7 @@ But what I say: `It's wasting life.`
 <br>
 Exactly, you just repeat your defination every time. The work will make you boring and no sense.
 
-# How do I define redux types in modern way?
+# How can we define redux types in modern way?
 ```js
 import { ACTION_TYPES, ACTION_SINGLE_TYPE } from 'redux-define-types';
 
@@ -84,12 +84,12 @@ export function dataReducer(state = {}, action) {
 ```bash
 yarn add redux-define-types
 
-// Or
+# Or
 
 npm install redux-define-types
 ```
 
-# Do not forget to add babel plugin.
+# Do not forget babel plugin.
 ```json
 // .babelrc
 
