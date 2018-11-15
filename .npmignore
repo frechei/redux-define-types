@@ -1,0 +1,10 @@
+.gitigonre
+.npmignore
+publish.sh
+demo/
+*.lock
+*.log
+.idea/
+.DS_Store
+.git
+node_modules/

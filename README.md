@@ -44,7 +44,7 @@ export const SET_LOCAL_STORAGE = 'set local storage';
 
 But what I say: `It's wasting life.` 
 <br>
-Exactly, you just repeat your defination every time. The work will make you boring and no sense.
+Exactly, you just repeat your defination every time. The work will make you crazy.
 
 # How can we define redux types in modern way?
 ```js
@@ -89,13 +89,32 @@ yarn add redux-define-types
 npm install redux-define-types
 ```
 
-# Do not forget babel plugin.
+# Do not forget to add babel plugin to file `.babelrc`
 ```json
-// .babelrc
-
 {
   "plugins": [
     "redux-define-types/babel"
   ]
 }
 ```
+## Options
+
+#### filePartner {string|regexp} (optional)
+Include the path where you define types. It can make babel transform faster.
+
+You can input a filename like: **"actionTypes.js"**
+<br>
+Or a folder like: **"/action-types/"**
+<br>
+Or a partner like: **/types-.\*?\.js/**
+
+```json
+{
+  "plugins": [
+    ["redux-define-types/babel", {"filePartner": "/action-types/"}]
+  ]
+}
+```
+# Support
+
+Babel 6
