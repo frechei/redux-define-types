@@ -1,5 +1,5 @@
-# How do you define redux types in traditional way?
-### First way:
+## How do you define redux types in traditional way?
+### First:
 ```js
 // Group 1
 export const FETCH_DATA = 'fetch data prepare';
@@ -17,7 +17,7 @@ export const SET_LOCAL_CLOCK = 'set local clock';
 // Group 4
 export const SET_LOCAL_STORAGE = 'set local storage';
 ```
-### Second way:
+### Second:
 ```js
 // Group 1
 export const FETCH_DATA = {
@@ -46,7 +46,7 @@ But what I say: `It's wasting life.`
 <br>
 Exactly, you just repeat your defination every time. The work will make you crazy.
 
-# How can we define redux types in modern way?
+## How can we define redux types in modern way?
 ```js
 import { ACTION_TYPES, ACTION_SINGLE_TYPE } from 'redux-define-types';
 
@@ -80,7 +80,12 @@ export function dataReducer(state = {}, action) {
 }
 ```
 
-# Installation
+## Support
+
+Babel 6
+
+
+## Installation
 ```bash
 yarn add redux-define-types@1.0
 
@@ -89,7 +94,7 @@ yarn add redux-define-types@1.0
 npm install redux-define-types@1.0
 ```
 
-# Do not forget to add babel plugin to file `.babelrc`
+## Do not forget to add babel plugin to file `.babelrc`
 ```json
 {
   "plugins": [
@@ -99,7 +104,7 @@ npm install redux-define-types@1.0
 ```
 ## Options
 
-#### filePartner (optional)
+#### filePartner
 Including the path where you define types. It can make babel transform faster.
 
 ```json
@@ -110,7 +115,7 @@ Including the path where you define types. It can make babel transform faster.
 }
 ```
 
-#### fileString (optional)
+#### fileString
 Including the path where you define types. It can make babel transform faster.
 
 It can be filename like: **"actionTypes.js"**
@@ -124,6 +129,32 @@ Or a folder like: **"/action-types/"**
   ]
 }
 ```
-# Support
 
-Babel 6
+#### typePrefix
+Force the beginning of types as specify string. Otherwise, error will be thrown.
+
+```json
+{
+  "plugins": [
+    ["redux-define-types/babel", {"typePrefix": "TYPE_"}]
+  ]
+}
+```
+
+#### typeSuffix
+Force the end of types as specify string. Otherwise, error will be thrown.
+
+```json
+{
+  "plugins": [
+    ["redux-define-types/babel", {"typeSuffix": "_TYPE"}]
+  ]
+}
+```
+
+## Tests
+1. Clone this repository
+
+2. Run `yarn install`
+
+3. Run `yarn run test`, and look at the file **demo/transform.js**
