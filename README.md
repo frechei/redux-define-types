@@ -88,7 +88,7 @@ export function dataReducer(state = {}, action) {
     <tr>
       <td>Babel 6</td>
       <td>1.x</td>
-      <td>yarn add redux-define-types@1.0</td>
+      <td>yarn add redux-define-types@1.1.0</td>
     </tr>
     <tr>
       <td>Babel 7</td>

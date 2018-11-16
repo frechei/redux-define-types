@@ -1,6 +1,6 @@
 {
   "name": "redux-define-types",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "description": "Define redux types in more easy way.",
   "keywords": ["redux", "action-types", "redux-types"],
   "main": "index.js",
