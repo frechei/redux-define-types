@@ -87,11 +87,11 @@ Babel 6
 
 ## Installation
 ```bash
-yarn add redux-define-types@1.0
+yarn add redux-define-types@1.1.0
 
 # Or
 
-npm install redux-define-types@1.0
+npm install redux-define-types@1.1.0
 ```
 
 ## Do not forget to add babel plugin to file `.babelrc`
