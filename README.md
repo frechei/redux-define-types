@@ -108,7 +108,7 @@ export function dataReducer(state = {}, action) {
 ```
 ## Options
 
-#### filePartner (optional)
+#### filePartner
 Including the path where you define types. It can make babel transform faster.
 
 ```json
@@ -119,7 +119,7 @@ Including the path where you define types. It can make babel transform faster.
 }
 ```
 
-#### fileString (optional)
+#### fileString
 Including the path where you define types. It can make babel transform faster.
 
 It can be filename like: **"actionTypes.js"**
@@ -130,6 +130,28 @@ Or a folder like: **"/action-types/"**
 {
   "plugins": [
     ["redux-define-types/babel", {"fileString": "/action-types/"}]
+  ]
+}
+```
+
+#### typePrefix
+Force the beginning of types as specify string. Otherwise, error will be thrown.
+
+```json
+{
+  "plugins": [
+    ["redux-define-types/babel", {"typePrefix": "TYPE_"}]
+  ]
+}
+```
+
+#### typeSuffix
+Force the end of types as specify string. Otherwise, error will be thrown.
+
+```json
+{
+  "plugins": [
+    ["redux-define-types/babel", {"typeSuffix": "_TYPE"}]
   ]
 }
 ```

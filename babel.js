@@ -12,7 +12,7 @@ module.exports = () => {
                     }
 
                     const {sourceFileName, filename} = file.opts;
-                    const {filePartner, fileString} = opts;
+                    const {filePartner, fileString, typePrefix, typeSuffix} = opts;
 
                     if (!filename || !sourceFileName) {
                         return;
@@ -34,6 +34,14 @@ module.exports = () => {
 
                     if (initializeValue.name === 'ACTION_TYPES' || initializeValue.name === 'ACTION_SINGLE_TYPE') {
                         let {name} = path.node.declarations[0].id;
+
+                        if (typePrefix && name.indexOf(typePrefix) !== 0) {
+                            throw path.buildCodeFrameError(`The types ${name} must be begin of ${typePrefix} like: ${typePrefix}${name}`);
+                        }
+
+                        if (typeSuffix && name.indexOf(typeSuffix) !== name.length - typeSuffix.length) {
+                            throw path.buildCodeFrameError(`The types ${name} must be end of ${typeSuffix} like: ${name}${typeSuffix}`);
+                        }
 
                         name = name.toLowerCase().replace(/_/g, ' ');
 
